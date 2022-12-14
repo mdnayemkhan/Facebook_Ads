@@ -1,23 +1,25 @@
 # Facebook_Ads
 Set up Facebook Ad network in your android project
 
->Step 1. Add the JitPack repository to your app-level build.gradle file
-```
-repositories {
-  mavenCentral()
-}
-```
->Step 2.Add the ependencie build.gradle file with current version:
+
+>Step 1.Add the ependencie build.gradle file with current version:
 ```
 dependencies {
 compile 'com.facebook.android:audience-network-sdk:6.+'
 }
 ```
 
->Step 3.Updating Your AndroidManifest.xml File
+>Step 2.Updating Your AndroidManifest.xml File
 ```
 <uses-permission android:name="android.permission.INTERNET" />  
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />  
+```
+
+>Step 3. In your Android manifest file, add the following attribute
+```
+<activity android:name="com.facebook.ads.AudienceNetworkActivity" 
+android:hardwareAccelerated="true" .../>
+}
 ```
 
 >Step 4.Adding a Layout Container for the Banner Ad in xml:
